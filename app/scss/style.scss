@@ -1,6 +1,9 @@
-@import "variables"; // because I want to usew my variables first
+@import "variables"; // because I want to use my variables first
+@import "mixins";
 @import "globals";
+
 @import "header";
+
 
 html {
     font-size: 100%;

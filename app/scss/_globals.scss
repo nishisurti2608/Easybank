@@ -39,18 +39,24 @@ a,a:visited,a:hover{
 &-ai-c{
 align-items: center;
 }
+}
 
 //Buttons
 
 button, .button{
  
-    padding: 1rem 1.875rem;
+    padding: 0.875rem 2.1875rem;
     background: linear-gradient(to right,$limeGreen,$brightCyan);
     border:0;
     border-radius: 50px;
     cursor: pointer;
     color: $white;
     font-weight: 400;
+     transition: opacity 300ms ease-in-out;
+
+     &:hover{
+        opacity:0.75 ;
+     }
 
 }
 
@@ -58,10 +64,14 @@ button, .button{
 
 .hide-for-mobile{
     
+    @include breakpoint-down(medium){
+        display: none;
+    }
 }
 
 .hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
     
-}
-
+    }
 }
